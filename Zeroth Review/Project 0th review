@@ -1,0 +1,189 @@
+Abstract 
+			1) To develop a new way of voice interaction with natural language as interface  for  startegy based computer games 
+			
+			2)To allow a Game player to control all the NPC(non-playing characters) in the game 
+			
+			3)To enable the Game player make strategic decisions based on perceptions recieved from all the NPC(non-playing characters)
+			
+			4)To build a game to achieve DDM(Dynamic decision making) .
+			
+			5)To higher the number of degrees of freedom in gaming environment and to make  rich human  computer interaction.
+
+Introduction 
+			Computer games are a major recreational activity .The challenge of interaction with the computer games is to transform it more engaging.
+			
+			Here, the interaction with the computer game will be via speech recognition . The  recognised speech  will be processed with state of art NLP techniques to infer . The inference is used to decide the next action.The user can communicate with NPC using his natural language .
+
+			eg :
+					player:"HEY STEP OUTSIDE , WE HAVE AN INCOMING . COPY THAT"
+
+					NPC: "I CANT , I STAND IN FRONT OF A CHAIN OF LANDMINES .COPY THAT"
+						
+					player:"GOT IT " .
+								
+ (this updates the knowledge base of characters i.e an update to their map , marking that place as danger)
+
+Existing works 
+
+1)Keyboard and gesture based interaction 
+			The computer game is played by pressing or holding the  key or combination of keys for a while . This key pressing  events are transformed into actions on the computer game . 
+			Gesture based interaction , recognises the users gestures via a web-cam or trackpad or any other  sensory devices. The gesture based recognition is then transformed into suitable actions on the game .
+			
+Limitations in keyboard and gesture based interaction
+			
+			A single player cannot control the whole team .  
+			
+			The user has to remember complete keycombinations or gestures and need to choose what to do when ? .
+			
+			The key combinations  vary for different platforms .
+			
+			a single key combination or gesture  cannot perform a complex action in the game .
+			
+			cannot produce illusion of intelligence in the behaviour of non-player characters .
+			
+2)Automatic Speech recognition systems
+			Voice driven commands can be used to control the game . The ASR works by converting speech to text and then matching the text against suitable actions .
+			
+Limitations in Automatic Speech recognition systems
+
+			Speech recognition systems however, do not support emotions , attitudes, tones etc. 
+			
+			Allows only restricted input
+			
+			User needs to remember all the key words
+			
+			Disruptions in input due to factors like accent/poor performance in input device(mic)
+			
+			User cannot give multiple constraints to a NPC .
+
+Solutions to existing problems 
+
+	 The game player should play the without any prior knowledge of key-combinations or gestures .
+
+	 The game player should have control or communication with multiple NPC's .
+	 
+	 Achieving complex actions must be feasible .	 
+	 
+	 Recognised speech must be transformed into actions via inferences and not just by a mapping between  text 	   and actions
+
+Proposed Work 
+	 
+	 The player will interact with the game through voice interaction . This speech is in turn converted to sequence of sentences . These sentences are inferred with a state of art nlp techniques for inference and converted into a suitable action . The inference may perform multiple actions from single speech .
+	 
+	 
+
+	 \section{Existing works}
+
+\begin{frame}{Limitations}
+\textbf{Limitations}
+
+\begin{itemize}
+\item
+A single player cannot control the whole team .
+\end{itemize}
+
+\begin{itemize}
+\item			
+			The user has to remember complete keycombinations or gestures and need to choose what to do when ? .
+\end{itemize}
+
+\begin{itemize}
+\item
+			The key combinations  vary for different platforms .
+\end{itemize}
+
+\begin{itemize}
+\item
+			A single key combination or gesture  cannot perform a complex action in the game .
+\end{itemize}
+
+\begin{itemize}
+\item
+			Cannot produce illusion of intelligence in the behaviour of non-player characters .
+\end{itemize}
+\end{frame}
+\subsection{Automatic Speech recognition systems }{Automatic Speech recognition systems}
+\begin{frame}{Automatic Speech recognition systems}
+\small
+\begin{itemize}
+\item
+Voice driven commands can be used to control the game .\\ The ASR works by converting speech to text and then matching the text against suitable actions .
+  \end{itemize}
+
+
+
+
+
+			
+	
+
+	\section{Solutions to existing problems}
+\begin{frame}{Solutions to existing problems}
+\small
+\begin{itemize}
+\item
+The game player should play the without any prior knowledge of key-combinations or gestures .
+\end{itemize}
+
+\begin{itemsize}
+\item
+The game player should have control or communication with multiple NPC's .
+\end{itemsize}
+
+\begin{itemsize}
+\item
+Achieving complex actions must be feasible .	 
+\end{itemsize}
+
+\begin{itemsize}
+\item
+Recognised speech must be transformed into actions via inferences and not just by a mapping between  text and actions .
+\end{itemize}
+
+\end{frame}
+
+\section{Proposed Work}
+\begin{frame}{Proposed Work}
+\small
+\begin{itemize}
+\textbf{
+The player will interact with the game through voice interaction .\\ This speech is in turn converted to sequence of sentences .\\ These sentences are inferred with a state of art nlp techniques for inference and converted into a suitable action . \\The inference may perform multiple actions from single speech .
+}
+\end{itemize}
+
+\end{frame}
+
+
+
+\section{Solutions to existing problems}
+\begin{frame}{Solutions to existing problems}
+\small
+\begin{itemsize}
+\item
+The game player should play the without any prior knowledge of key-combinations or gestures .
+\end{itemsize}
+
+\begin{itemsize}
+\item
+The game player should have control or communication with multiple NPC's .
+\end{itemsize}
+
+\begin{itemsize}
+\item
+Achieving complex actions must be feasible .	 
+\end{itemsize}
+
+\begin{itemsize}
+\item
+Recognised speech must be transformed into actions via inferences and not just by a mapping between  text and actions .
+\end{itemsize}
+
+\end{frame}
+
+
+[2] Asli Celikyilmaz, Marcus Thint, Zhiheng Huang, ”A Graph - based Semi - Supervised Learning for Question - Answering”, Journal in Association of Computer Linguistics, 2009, P09-1081.\\
+\vspace{0.5cm}
+ [3] Chaitanya Chemudugunta, Padhraic Smyth, Mark Steyvers, “Modeling General and Specific Aspects of Documents with Probabilistic Topic Model”, Paper in Neural Information Processing Systems, Volume 19 2006.\\
+\vspace{0.5cm}
+ [4] Xing Wei, W. Bruce Croft, “LDA-Based Document Models for Ad-hoc Retrieval”, Journal of Special Interest Group on Information Retrieval, 2006
+

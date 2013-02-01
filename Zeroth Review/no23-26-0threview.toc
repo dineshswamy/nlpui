@@ -1,0 +1,11 @@
+\beamer@endinputifotherversion {3.10pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Abstract}{3}{0}{1}
+\beamer@sectionintoc {2}{Introduction}{8}{0}{2}
+\beamer@sectionintoc {3}{Existing works}{12}{0}{3}
+\beamer@subsectionintoc {3}{1}{Keyboard and gesture based interaction }{12}{0}{3}
+\beamer@subsectionintoc {3}{2}{Automatic Speech recognition systems }{19}{0}{3}
+\beamer@sectionintoc {4}{Solutions to existing problems}{26}{0}{4}
+\beamer@sectionintoc {5}{Proposed Work}{30}{0}{5}
+\beamer@sectionintoc {6}{Proposed Architecture}{31}{0}{6}
+\beamer@sectionintoc {7}{References}{32}{0}{7}
