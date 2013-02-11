@@ -1,0 +1,36 @@
+
+\data\
+ngram 1=9
+ngram 2=14
+ngram 3=0
+
+\1-grams:
+-0.30103	</s>
+-99	<s>	-99
+-1.146128	down	-99
+-1.146128	left	-99
+-1.146128	right	-99
+-1.146128	run	-99
+-1.146128	stop	-99
+-1.146128	up	-99
+-1.146128	walk	-99
+
+\2-grams:
+-0.845098	<s> down
+-0.845098	<s> left
+-0.845098	<s> right
+-0.845098	<s> run
+-0.845098	<s> stop
+-0.845098	<s> up
+-0.845098	<s> walk
+0	down </s>
+0	left </s>
+0	right </s>
+0	run </s>
+0	stop </s>
+0	up </s>
+0	walk </s>
+
+\3-grams:
+
+\end\

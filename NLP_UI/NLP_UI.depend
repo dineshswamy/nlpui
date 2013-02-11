@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1360091845 source:/home/sashikanth/Documents/NLP_UI_GAME/NLP_UI/main.cpp
+	<SFML/Graphics.hpp>
+	<iostream>
+	<fstream>
+	<string>
+
