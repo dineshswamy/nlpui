@@ -1,0 +1,45 @@
+# depslib dependency file v1.0
+1364317396 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/main.cpp
+	<SFML/Graphics.hpp>
+	<iostream>
+	<string>
+	"include/Player.h"
+	"include/Camera.h"
+	<sys/stat.h>
+	<time.h>
+
+1364319884 /home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/include/Player.h
+	<SFML/Graphics.hpp>
+	<string>
+	"Animation.h"
+	<sys/stat.h>
+	<time.h>
+
+1364317992 /home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/include/Animation.h
+	<SFML/Graphics.hpp>
+	<vector>
+
+1363551217 /home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/include/Camera.h
+	<SFML/Graphics.hpp>
+
+1364317929 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/src/Animation.cpp
+	"../include/Animation.h"
+	<iostream>
+
+1363553688 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/src/Camera.cpp
+	"../include/Camera.h"
+
+1364313426 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/src/Player.cpp
+	"../include/Player.h"
+	<iostream>
+	<fstream>
+	<string>
+	<cstdlib>
+
+1362131753 /home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/include/level.h
+	<string>
+	<vector>
+	<map>
+	<SFML/System.hpp>
+	<SFML/Graphics.hpp>
+

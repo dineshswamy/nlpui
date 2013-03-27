@@ -1,0 +1,18 @@
+#ifndef CAMERA_H
+#define CAMERA_H
+
+#include<SFML/graphics.hpp>
+class Camera
+{
+    public:
+        Camera();
+        float camera_x,camera_
+        sf::View cameraPosition;
+        void setView(sf::View view);
+        sf::View getView();
+        void Update();
+    protected:
+    private:
+};
+
+#endif // CAMERA_H
