@@ -1,0 +1,20 @@
+#include "../include/Map_places.h"
+
+
+Map_places::Map_places(sf::IntRect bounds,std::int id,std::string name)
+{
+    this->bounds=bounds;
+    this->id=id;
+    place_name=name;
+}
+
+sf::IntRect getIntRect()
+{
+    return bounds;
+}
+
+void setIntRect(sf::IntRect rect)
+{
+    this->bounds=rect;
+}
+

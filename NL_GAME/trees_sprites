@@ -1,0 +1,44 @@
+{"frames": [
+
+{
+	"filename": "banyan_tree.png",
+	"frame": {"x":2,"y":2,"w":113,"h":143},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":113,"h":143},
+	"sourceSize": {"w":113,"h":143}
+},
+{
+	"filename": "coconut_tree.png",
+	"frame": {"x":2,"y":147,"w":164,"h":148},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":164,"h":148},
+	"sourceSize": {"w":164,"h":148}
+},
+{
+	"filename": "mango_tree.png",
+	"frame": {"x":2,"y":297,"w":102,"h":136},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":102,"h":136},
+	"sourceSize": {"w":102,"h":136}
+},
+{
+	"filename": "neem_tree.png",
+	"frame": {"x":106,"y":297,"w":101,"h":134},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":101,"h":134},
+	"sourceSize": {"w":101,"h":134}
+}],
+"meta": {
+	"app": "http://www.texturepacker.com",
+	"version": "1.0",
+	"image": "trees_sprites.png",
+	"format": "RGBA8888",
+	"size": {"w":256,"h":512},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:c4b6fd1b32919000f5eba93a44ef36ce$"
+}
+}

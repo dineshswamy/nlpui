@@ -1,16 +1,17 @@
 #ifndef CAMERA_H
 #define CAMERA_H
 
-#include<SFML/graphics.hpp>
+#include<SFML/Graphics.hpp>
 class Camera
 {
     public:
-        Camera();
-        float camera_x,camera_
+        Camera(float x,float y);
+        float camera_x,camera_y;
         sf::View cameraPosition;
         void setView(sf::View view);
+        void setRotation(sf::Vi);
         sf::View getView();
-        void Update();
+        void Update(float x , float y);
     protected:
     private:
 };

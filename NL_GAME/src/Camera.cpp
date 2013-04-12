@@ -27,3 +27,8 @@ sf::View Camera::getView()
     return Camera::cameraPosition;
 }
 
+
+void Camera::setRotation(float angle)
+{
+    Camera::cameraPosition.setRotation(angle);
+}

@@ -9,6 +9,7 @@ class Camera
         float camera_x,camera_y;
         sf::View cameraPosition;
         void setView(sf::View view);
+        void setRotation(float angle);
         sf::View getView();
         void Update(float x , float y);
     protected:

@@ -1,40 +1,54 @@
 # depslib dependency file v1.0
-1364317396 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/main.cpp
+1365590578 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/main.cpp
 	<SFML/Graphics.hpp>
-	<iostream>
-	<string>
-	"include/Player.h"
-	"include/Camera.h"
-	<sys/stat.h>
-	<time.h>
-
-1364319884 /home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/include/Player.h
-	<SFML/Graphics.hpp>
-	<string>
-	"Animation.h"
-	<sys/stat.h>
-	<time.h>
-
-1364317992 /home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/include/Animation.h
-	<SFML/Graphics.hpp>
-	<vector>
-
-1363551217 /home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/include/Camera.h
-	<SFML/Graphics.hpp>
-
-1364317929 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/src/Animation.cpp
-	"../include/Animation.h"
-	<iostream>
-
-1363553688 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/src/Camera.cpp
-	"../include/Camera.h"
-
-1364313426 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/src/Player.cpp
-	"../include/Player.h"
+	<SFML/Audio.hpp>
 	<iostream>
 	<fstream>
 	<string>
+	"include/Player.h"
+	"include/Map_places.h"
+	"include/Camera.h"
+	"include/Animation.h"
+	"include/Enemy_sprites.h"
+	<vector>
 	<cstdlib>
+	<sys/stat.h>
+	<time.h>
+
+1364882288 /home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/include/Player.h
+	<SFML/Graphics.hpp>
+	"Animation.h"
+	<sys/stat.h>
+	<time.h>
+	<fstream>
+	<string>
+
+1364979643 /home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/include/Animation.h
+	<SFML/Graphics.hpp>
+	"Map_places.h"
+	<vector>
+	<cstdlib>
+
+1364476690 /home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/include/Camera.h
+	<SFML/Graphics.hpp>
+
+1364981399 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/src/Animation.cpp
+	"../include/Animation.h"
+	<iostream>
+	<fstream>
+	<SFML/Audio.hpp>
+
+1364476741 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/src/Camera.cpp
+	"../include/Camera.h"
+
+1365589833 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/src/Player.cpp
+	"../include/Player.h"
+	<iostream>
+	<cstdlib>
+	<sstream>
+	<algorithm>
+	<iterator>
+	<vector>
 
 1362131753 /home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/include/level.h
 	<string>
@@ -42,4 +56,20 @@
 	<map>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
+
+1364396583 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/src/Map_places.cpp
+	"../include/Map_places.h"
+
+1364396543 /home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/include/Map_places.h
+	<string>
+	<SFML/Graphics.hpp>
+
+1364935645 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/src/Enemy_sprites.cpp
+	"../include/Enemy_sprites.h"
+	<string>
+	<iostream>
+
+1364930775 /home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/include/Enemy_sprites.h
+	<SFML/Graphics.hpp>
+	<vector>
 

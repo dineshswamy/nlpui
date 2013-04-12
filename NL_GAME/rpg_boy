@@ -1,0 +1,140 @@
+{"frames": [
+
+{
+	"filename": "rpg_boy [www.imagesplitter.net]-0-0.png",
+	"frame": {"x":2,"y":2,"w":32,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":48},
+	"sourceSize": {"w":32,"h":48}
+},
+{
+	"filename": "rpg_boy [www.imagesplitter.net]-0-1.png",
+	"frame": {"x":36,"y":2,"w":32,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":48},
+	"sourceSize": {"w":32,"h":48}
+},
+{
+	"filename": "rpg_boy [www.imagesplitter.net]-0-2.png",
+	"frame": {"x":70,"y":2,"w":32,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":48},
+	"sourceSize": {"w":32,"h":48}
+},
+{
+	"filename": "rpg_boy [www.imagesplitter.net]-0-3.png",
+	"frame": {"x":104,"y":2,"w":32,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":48},
+	"sourceSize": {"w":32,"h":48}
+},
+{
+	"filename": "rpg_boy [www.imagesplitter.net]-1-0.png",
+	"frame": {"x":138,"y":2,"w":32,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":48},
+	"sourceSize": {"w":32,"h":48}
+},
+{
+	"filename": "rpg_boy [www.imagesplitter.net]-1-1.png",
+	"frame": {"x":172,"y":2,"w":32,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":48},
+	"sourceSize": {"w":32,"h":48}
+},
+{
+	"filename": "rpg_boy [www.imagesplitter.net]-1-2.png",
+	"frame": {"x":206,"y":2,"w":32,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":48},
+	"sourceSize": {"w":32,"h":48}
+},
+{
+	"filename": "rpg_boy [www.imagesplitter.net]-1-3.png",
+	"frame": {"x":2,"y":52,"w":32,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":48},
+	"sourceSize": {"w":32,"h":48}
+},
+{
+	"filename": "rpg_boy [www.imagesplitter.net]-2-0.png",
+	"frame": {"x":36,"y":52,"w":32,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":48},
+	"sourceSize": {"w":32,"h":48}
+},
+{
+	"filename": "rpg_boy [www.imagesplitter.net]-2-1.png",
+	"frame": {"x":70,"y":52,"w":32,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":48},
+	"sourceSize": {"w":32,"h":48}
+},
+{
+	"filename": "rpg_boy [www.imagesplitter.net]-2-2.png",
+	"frame": {"x":104,"y":52,"w":32,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":48},
+	"sourceSize": {"w":32,"h":48}
+},
+{
+	"filename": "rpg_boy [www.imagesplitter.net]-2-3.png",
+	"frame": {"x":138,"y":52,"w":32,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":48},
+	"sourceSize": {"w":32,"h":48}
+},
+{
+	"filename": "rpg_boy [www.imagesplitter.net]-3-0.png",
+	"frame": {"x":172,"y":52,"w":32,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":48},
+	"sourceSize": {"w":32,"h":48}
+},
+{
+	"filename": "rpg_boy [www.imagesplitter.net]-3-1.png",
+	"frame": {"x":206,"y":52,"w":32,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":48},
+	"sourceSize": {"w":32,"h":48}
+},
+{
+	"filename": "rpg_boy [www.imagesplitter.net]-3-2.png",
+	"frame": {"x":2,"y":102,"w":32,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":48},
+	"sourceSize": {"w":32,"h":48}
+},
+{
+	"filename": "rpg_boy [www.imagesplitter.net]-3-3.png",
+	"frame": {"x":36,"y":102,"w":32,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":48},
+	"sourceSize": {"w":32,"h":48}
+}],
+"meta": {
+	"app": "http://www.texturepacker.com",
+	"version": "1.0",
+	"image": "rpg_boy_sprites.png",
+	"format": "RGBA8888",
+	"size": {"w":256,"h":256},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:7c24d35fabe637c018c8ea0d709ced54$"
+}
+}

@@ -1,14 +1,15 @@
 #include "../include/Player.h"
 #include<iostream>
-#include<fstream>
-#include<string>
 #include<cstdlib>
-#include<sys/stat.h>
-#include<time.h>
+#include<sstream>
+#include<algorithm>
+#include<iterator>
+#include<vector>
+
 
 Player::Player()
 {
-    //ctor
+
 }
 
 Player::~Player()
@@ -16,15 +17,18 @@ Player::~Player()
     //dtor
 }
 
-void Player::Initialize(int x , int y)
+void Player::Initialize(int x , int y,sf::IntRect ini_rect,std::string filename)
 {
     this->x=x;
     this->y=y;
+    instr_file=filename;
     CurrentFrameX=0;
     CurrentFrameY=0;
     moveSpeed=3;
-    playerAnimation.Initialize(x,y);
+    playerAnimation.Initialize(x,y,ini_rect);
     moveSpeed++;
+    if(!stat(instr_file.c_str(),&file_access))
+        last_modified_time=file_access.st_mtime;
 }
 
 void Player::LoadContent(std::string image_location)
@@ -36,67 +40,66 @@ void Player::LoadContent(std::string image_location)
 
 void Player::Update(sf::RenderWindow &window)
 {
-    std::string filename,hyp;
-    std::ifstream fp;
-
-    sf::FloatRect bound_tree(822,318,214,230);
-    sf::FloatRect bound_building(207,594,214,248);
-    filename="hypothesis";
-    hyp="";
-
-    fp.open();
-    std::getline(fp,hyp);
-
+    instructions="";
+    fp.open(instr_file.c_str());
+    std::getline(fp,instructions);
     fp.close();
 
-
-        if(hyp=="run")
+        if(instructions=="run")
             moveSpeed=7;
-        else if(hyp=="walk")
+        else if(instructions=="walk")
             moveSpeed=3;
 
-		if(hyp=="up" || hyp=="run towards north" || hyp=="run upwards")
-        {
-            CurrentFrameY=3;
-            moveSpeed=5;
-            y-=moveSpeed;
 
+        if(instructions=="fire the tower guy")
+        {
+        system("espeak fire");
+        playerAnimation.writeDietoOtherplayer();
         }
-        else if(hyp=="down" || hyp=="walk towards south" || hyp=="walk downwards")
+        else if (instructions=="die")
+            playerAnimation.dieSprites(window);
+        else if (instructions=="leftfire")
+            playerAnimation.playerFireSideLeft(window);
+        else if(instructions=="leftfirebackside")
+            playerAnimation.playerFireSideLeftBackside(window);
+        else if(instructions=="walkfront to the mango tree")
         {
-            CurrentFrameY=0;
-            moveSpeed=3;
-            y+=moveSpeed;
-
-        }
-
-		if(hyp=="left" || hyp=="go to your left" || hyp=="run towards west")
-        {
-            CurrentFrameY=1;
-            moveSpeed=7;
-            x-=moveSpeed;
-
-        }
-        else if(hyp=="right"|| hyp=="go to your right")
-        {
-
-            CurrentFrameY=2;
-            moveSpeed=3;
-            x+=moveSpeed;
+            system("espeak fire");
+            playerAnimation.playerFrontWalk(window,750,1290);
+            playerAnimation.curr_position="mango tree";
         }
 
-        playerAnimation.setPosition(x,y);
-
-        if(hyp=="fire")
+        else if(instructions=="walkfront to the neem tree")
         {
-            //to be filled
-            playerAnimation.playerAnimations(0,5,49,43,8,window);
+            playerAnimation.playerFrontWalk(window,870,1330);
+            playerAnimation.curr_position="neem tree";
         }
+
+        else if(instructions=="walkfront to the coconut tree")
+        {
+            playerAnimation.playerFrontWalk(window,930,1405);
+            playerAnimation.curr_position="coconut tree";
+        }
+
+        else if(instructions=="where are you")
+        {
+         playerAnimation.sayLatLong(window);
+        }
+
 
 }
 
-void Player::isFileModified()
+bool Player::IsFileContentsChanged()
 {
+    stat(instr_file.c_str(),&file_access);
+    if(difftime(last_modified_time,file_access.st_mtime))
+    {
+        last_modified_time=file_access.st_mtime;
+        return true;
+    }
+    else{
+        return false;
+    }
 
 }
 

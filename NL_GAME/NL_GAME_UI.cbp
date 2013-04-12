@@ -16,6 +16,7 @@
 				</Compiler>
 				<Linker>
 					<Add option="-lsfml-graphics" />
+					<Add option="-lsfml-audio" />
 					<Add option="-lsfml-window" />
 					<Add option="-lsfml-system" />
 					<Add option="-ltinyxml" />
@@ -40,15 +41,15 @@
 		</Compiler>
 		<Unit filename="include/Animation.h" />
 		<Unit filename="include/Camera.h" />
+		<Unit filename="include/Enemy_sprites.h" />
+		<Unit filename="include/Map_places.h" />
 		<Unit filename="include/Player.h" />
-		
 		<Unit filename="main.cpp" />
-		
 		<Unit filename="src/Animation.cpp" />
 		<Unit filename="src/Camera.cpp" />
+		<Unit filename="src/Enemy_sprites.cpp" />
+		<Unit filename="src/Map_places.cpp" />
 		<Unit filename="src/Player.cpp" />
-		
-
 		<Extensions>
 			<envvars />
 			<code_completion />
