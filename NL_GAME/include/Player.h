@@ -12,11 +12,12 @@ class Player
     public:
         Player();
         ~Player();
-        void Initialize(int x ,int y,sf::IntRect ini_rect,std::string filename);
+        void Initialize(int x ,int y,sf::IntRect ini_rect,std::string filename,bool enemy);
         void LoadContent(std::string s);
-        void Update(sf::RenderWindow &window);
+        void Update(sf::RenderWindow &window,std::vector<sf::Vector2f> &position_players);
         void Draw(sf::RenderWindow &window);
         bool IsFileContentsChanged();
+        bool is_recursive;
         Animation playerAnimation;
 
     protected:

@@ -4,32 +4,101 @@
 Enemy_sprites::Enemy_sprites()
 {
     //ctor
+    moving=false;
+    in_warehouse_left=true;
+    start_recursive=false;
 
 }
-void Enemy_sprites::setImage(std::string imagename,sf::IntRect rect_init)
+void Enemy_sprites::setImage(sf::Texture &ture,sf::IntRect rect_init,std::string m_loc)
 {
-sf::Texture ture;
-if(!ture.loadFromFile(imagename))
-    std::cout<<"Error reading file ."<<std::endl;
 enemyLook.setTexture(ture);
-enemyLook.setTextureRect(sf::IntRect(100,100,569,327));
-enemyLook.setPosition(100,100);
+bg_sound.openFromFile(m_loc);
+enemyLook.setTextureRect(rect_init);
+enemyLook.setPosition(696,648);
+clk.restart();
 }
 void  Enemy_sprites::setPosition(sf::Vector2f coords)
 {
-enemyLook.setPosition(coords);
+    enemyLook.setPosition(coords);
+}
+
+void  Enemy_sprites::setPositionIndex()
+{
+    position_stack_index=position.begin();
+}
+
+void  Enemy_sprites::train_recursive()
+{
+    if(start_recursive)
+    {
+   if(enemyLook.getPosition().x==696 && enemyLook.getPosition().y==648)
+   in_warehouse_left=true;
+   else if(enemyLook.getPosition().x==1296 && enemyLook.getPosition().y==1210)
+    in_warehouse_left=false;
+
+   if(clk.getElapsedTime().asSeconds()>10 && clk.getElapsedTime().asSeconds()<30)
+   {
+    moving=true;
+    //bg_sound.setLoop(true);
+    //bg_sound.play();
+    in_warehouse_left=true;
+    if(position_stack_index!=position.end())
+        position_stack_index++;
+    else
+        position_stack_index=position.begin();
+        enemyLook.setPosition(*position_stack_index);
+    //std::cout<<"Train x"<<enemyLook.getPosition().x<<"Train y"<<enemyLook.getPosition().y<<std::endl;
+   }
+   else if(clk.getElapsedTime().asSeconds()>40)
+   {
+    clk.restart();
+    //bg_sound.setLoop(false);
+    //bg_sound.stop();
+    moving=false;
+   }
+}
+}
+
+
+void  Enemy_sprites::copter_recursive()
+{
+
+    if(!position.empty())
+    {
+        //bg_sound.setLoop(true);
+        //bg_sound.play();
+
+        if(position_stack_index!=position.end())
+            position_stack_index++;
+        else
+            position_stack_index=position.begin();
+            enemyLook.setPosition(*position_stack_index);
+    }
+}
+
+void Enemy_sprites::copter_frame(int index)
+{
+
+       if(index==1)
+        {
+            //bg_sound.setLoop(false);
+            //bg_sound.stop();
+
+            enemyLook.setTextureRect(sf::IntRect(2,2,82,86));
+            clearFrameandPosition();
+            enemyLook.setRotation(50);
+        }
+}
+
+
+void Enemy_sprites::clearFrameandPosition()
+{
+    enemyLook.setPosition(*position_stack_index);
+    position.clear();
 }
 
 void Enemy_sprites::Draw(sf::RenderWindow &window)
 {
- //if(!frame_stack.empty())
-  // enemyLook.setTextureRect(*frame_stack_index);
-  // if(frame_stack_index!=frame_stack.end())
-  //  frame_stack_index++;
-// else
-  //  frame_stack_index=frame_stack.begin();
-
- // if(enemyLook.getTextureRect().width!=0 && enemyLook.getTextureRect().height!=0)
     window.draw(enemyLook);
 }
 

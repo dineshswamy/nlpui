@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1365590578 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/main.cpp
+1367224806 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/main.cpp
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
 	<iostream>
@@ -15,7 +15,7 @@
 	<sys/stat.h>
 	<time.h>
 
-1364882288 /home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/include/Player.h
+1367159185 /home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/include/Player.h
 	<SFML/Graphics.hpp>
 	"Animation.h"
 	<sys/stat.h>
@@ -23,25 +23,28 @@
 	<fstream>
 	<string>
 
-1364979643 /home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/include/Animation.h
+1367163348 /home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/include/Animation.h
 	<SFML/Graphics.hpp>
 	"Map_places.h"
+	"Enemy_sprites.h"
 	<vector>
 	<cstdlib>
 
 1364476690 /home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/include/Camera.h
 	<SFML/Graphics.hpp>
 
-1364981399 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/src/Animation.cpp
+1367225204 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/src/Animation.cpp
 	"../include/Animation.h"
 	<iostream>
+	<cstdlib>
+	<cmath>
 	<fstream>
 	<SFML/Audio.hpp>
 
 1364476741 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/src/Camera.cpp
 	"../include/Camera.h"
 
-1365589833 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/src/Player.cpp
+1367176283 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/src/Player.cpp
 	"../include/Player.h"
 	<iostream>
 	<cstdlib>
@@ -64,12 +67,13 @@
 	<string>
 	<SFML/Graphics.hpp>
 
-1364935645 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/src/Enemy_sprites.cpp
+1366538594 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/src/Enemy_sprites.cpp
 	"../include/Enemy_sprites.h"
 	<string>
 	<iostream>
 
-1364930775 /home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/include/Enemy_sprites.h
+1366441280 /home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/include/Enemy_sprites.h
 	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
 	<vector>
 

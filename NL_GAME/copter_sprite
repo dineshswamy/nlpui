@@ -1,0 +1,28 @@
+{"frames": [
+
+{
+	"filename": "copter_explosion.png",
+	"frame": {"x":2,"y":2,"w":82,"h":86},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":82,"h":86},
+	"sourceSize": {"w":82,"h":86}
+},
+{
+	"filename": "helicopter.png",
+	"frame": {"x":2,"y":90,"w":68,"h":79},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":68,"h":79},
+	"sourceSize": {"w":68,"h":79}
+}],
+"meta": {
+	"app": "http://www.texturepacker.com",
+	"version": "1.0",
+	"image": "copter_sprite.png",
+	"format": "RGBA8888",
+	"size": {"w":128,"h":256},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:064fc022dc3454063f6a16ce5a07b685$"
+}
+}
