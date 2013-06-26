@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1367224806 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/main.cpp
+1371460933 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/main.cpp
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
 	<iostream>
@@ -44,7 +44,7 @@
 1364476741 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/src/Camera.cpp
 	"../include/Camera.h"
 
-1367176283 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/src/Player.cpp
+1369570388 source:/home/sashikanth/Documents/NLP_UI_GAME/NL_GAME/src/Player.cpp
 	"../include/Player.h"
 	<iostream>
 	<cstdlib>

@@ -6,19 +6,15 @@ import time
 import os
 import os.path as path
 import subprocess
-class Agent_rescue:
-	def __init__(self,file_location,id,name):
-		self.file_location=file_location
-		self.id=id
-		self.name=name
-		self.clips=clips.Environment()
 
-
+from twisted.internet import reactor
+from autobahn.websocket import WebSocketServerFactory,WebSocketServerProtocol,listenWS
 
 text=''
-file_to_write=''
+file_to_write=None
 string_to_write=''
 file_last_modified=path.getmtime("hypothesis")
+
 def chooseAgentFile(name):
 	return {
 				'agentgreen':'../team/bomber',
@@ -56,7 +52,11 @@ def string_from_pattern(instruction) :
 		if place:
 			return str("walkfront " + str(place.group(0)))
 	if re.match("(kill|destroy|fire|shoot|attack|assasinate).*",instruction,re.IGNORECASE):
-		place=re.search("((the\s?)?tower\s?guy)",instruction,re.IGNORECASE)
+		place=re.search("((the\s?)?tower\s?guy|man)",instruction,re.IGNORECASE)
+		if place:
+			return "fire tower guy"
+	if re.match("(kill|destroy|fire|shoot|attack|assasinate).*",instruction,re.IGNORECASE):
+		place=re.search("(the\s?(man|enemy)\s?in\s?your\s?range|sight)",instruction,re.IGNORECASE)
 		if place:
 			return "fire tower guy"
 
@@ -69,7 +69,7 @@ def string_from_pattern(instruction) :
 		if place:
 			return "blow copter"
 
-	if re.match("(capture|go\s?to|surround|take\s?charge).*",instruction,re.IGNORECASE):
+	if re.match("(capture|go\s?to|surround|take\s?charge\s?of).*",instruction,re.IGNORECASE):
 		place=re.search("((the\s?)?tower)",instruction,re.IGNORECASE)
 		if place:
 			return "take charge tower"
@@ -77,16 +77,16 @@ def string_from_pattern(instruction) :
 		subprocess.call(["espeak","cannot understand your sentence"])
 		return instruction
 
-while text!="exit" :
 
-	#if IsFileChanged(path.getmtime("hypothesis"),file_last_modified) :
-		
+def apply_nlp(text):
+		#if IsFileChanged(path.getmtime("hypothesis"),file_last_modified) :
 		#print "File modified"
-		text=raw_input("=>")
 		#hypo_file=open("hypothesis",'w+')
 		#text=hypo_file.readline()
 		#hypo_file.write('');
 		#hypo_file.close()
+		text=text.strip()
+		global file_to_write
 		
 		if text!="" and text!='\n':
 			if re.match("agent\s?green.*",text)    :
@@ -98,28 +98,50 @@ while text!="exit" :
 			elif  re.match("agent\s?orange.*",text) :
 					file_to_write=chooseAgentFile('agentorange')
 		 
-		if file_to_write!='':
-				print file_to_write
-				if text!="":
-					file_agent=open(file_to_write,'w')
-					string_to_write=re.sub(r'agentorange|agentblue|agentgreen|agentlgreen',"",text)
-					string_to_write=string_to_write.strip()
-				if text!='' :
-					string_to_write=string_from_pattern(string_to_write)
-					file_agent.write(string_to_write)
-					time.sleep(3)
+			if file_to_write != None:
+					
+					if text!="":
+						file_agent=open(file_to_write,'w')
+						string_to_write=re.sub(r'agent\s?orange|agent\s?blue|agent\s?green|agent\s?lgreen',"",text)
+						string_to_write=string_to_write.strip()
+					if text!='':
+						string_to_write=string_from_pattern(string_to_write)
+						file_agent.write(string_to_write)
+						time.sleep(3)
+						file_agent.close()
+							#print "...preprocessed text"
+							
+							#print string_to_write
+							#print "Doing lemmatization"
+							#lemmatize_words(string_to_write)
+							#print "...applying POS TAG"
+							#part_of_speech_tagging(string_to_write)
+			else :
+				subprocess.call(["espeak","who you are taking to"])
 
-				print "...preprocessed text"
+def display_to_console(msg):
+	print "\r" + msg
+
+
+class SpeechServer(WebSocketServerProtocol):
+		def onMessage(self,msg,binary):
+				display_to_console(msg)	
+				apply_nlp(msg)	
+				#if(re.search("yes",msg,re.IGNORECASE)):
+				#					text=re.sub(r'yes',"",msg)
 				
-				print string_to_write
-				#print "Doing lemmatization"
-				#lemmatize_words(string_to_write)
-				#print "...applying POS TAG"
-				#part_of_speech_tagging(string_to_write)
-				file_agent.close()
-		else :
-			subprocess.call(["espeak","who you are taking to"])
-			
 
 
 
+class Agent_rescue:
+	def __init__(self,file_location,id,name):
+		self.file_location=file_location
+		self.id=id
+		self.name=name
+		self.clips=clips.Environment()
+
+
+factory=WebSocketServerFactory("ws://localhost:9000",debug=False);
+factory.protocol=SpeechServer
+listenWS(factory)
+reactor.run()

@@ -73,12 +73,12 @@ void Player::Update(sf::RenderWindow &window,std::vector<sf::Vector2f> &position
         }
         else if(instructions=="walkfront neem tree")
         {
-            playerAnimation.playerFrontWalk(window,870,1330);
+            playerAnimation.playerFrontWalk(window,853,1385);
             playerAnimation.curr_position="neem tree";
         }
         else if(instructions=="walkfront coconut tree")
         {
-            playerAnimation.playerFrontWalk(window,930,1405);
+            playerAnimation.playerFrontWalk(window,911,1493);
             playerAnimation.curr_position="coconut tree";
         }
         else if(instructions=="walkfront tower")

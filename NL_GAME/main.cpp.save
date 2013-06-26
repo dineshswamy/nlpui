@@ -52,15 +52,22 @@ sf::Music train_sound;
 int main()
 {
     sf::VideoMode desktop = sf::VideoMode::getDesktopMode();
-    sf::RenderWindow window(sf::VideoMode(1024,768,desktop.bitsPerPixel),"Natural language based game");
+    //sf::Font fnt;
+    //fnt.loadFromFile("leo-arrow.ttf");
+    sf::Text speech ;
+    //speech.setFont(fnt);
+    speech.setColor(sf::Color::White);
+    speech.setString("This is the text that is going to be placed in the middle. no matter what");
+
+    sf::RenderWindow window(sf::VideoMode(1024,768,desktop.bitsPerPixel),"a Natural language based Computer game from SLEEPLESS WORKS");
     window.setFramerateLimit(15);
     Camera camera_view(0,0);
     float top=0.0,left=0.0,width=0.0,height=0.0,x=70.f,y=70.f;
     //train_sound.openFromFile("train.ogg");
 
 
-    train_sound.setVolume(40);
-    train_sound.setLoop(true);
+    //train_sound.setVolume(40);
+    //train_sound.setLoop(true);
     train_sound.play();
 
     sf::Sprite mango_tree_spr;
@@ -268,7 +275,7 @@ hostage_pos_itr=hostage_pos.begin();
 
                 rec_y=0;
 
-            std::cout<<"X"<<x<<"Y"<<y<<std::endl;
+             std::cout<<"X"<<x<<"Y"<<y<<std::endl;
             if( sf::Keyboard::isKeyPressed(sf::Keyboard:: M))
              {
                 rec_x_h=rec_x_h+5;
@@ -286,11 +293,6 @@ hostage_pos_itr=hostage_pos.begin();
                 rec_y_h=rec_y_h-5;
 
              }
-
-
-
-
-
             camera_view.Update(rec_x,rec_y);
             camera_view.setRotation(angle);
             window.setView(camera_view.getView());
@@ -320,36 +322,37 @@ hostage_pos_itr=hostage_pos.begin();
 
         window.draw(map_sprite);
 
+
         if(player_bomber.IsFileContentsChanged())
             player_bomber.Update(window,enemy_team);
 
         if(player_sniper.IsFileContentsChanged())
-        player_sniper.Update(window);
+        player_sniper.Update(window,enemy_team);
 
         if(player_jumper.IsFileContentsChanged())
-        player_jumper.Update(window);
+        player_jumper.Update(window,enemy_team);
 
         if(player_firer.IsFileContentsChanged())
-        player_firer.Update(window);
+        player_firer.Update(window,enemy_team);
 
 
          if(player_enemy.IsFileContentsChanged())
-            player_enemy.Update(window);
+            player_enemy.Update(window,rescue_team);
 
          if(player_enemy_a.IsFileContentsChanged())
-            player_enemy_a.Update(window);
+            player_enemy_a.Update(window,rescue_team);
 
          if(player_enemy_b.IsFileContentsChanged())
-            player_enemy_b.Update(window);
+            player_enemy_b.Update(window,rescue_team);
 
          if(player_enemy_c.IsFileContentsChanged())
-            player_enemy_c.Update(window);
+            player_enemy_c.Update(window,rescue_team);
 
 
 
         enemy_train.train_recursive();
         enemy_copter.copter_recursive();
-
+        //speech.setPosition(window.getPosition().x,window.getPosition().y);
         /*
         if(ck.getElapsedTime().asSeconds()>20)
         {
@@ -360,7 +363,7 @@ hostage_pos_itr=hostage_pos.begin();
         window.draw(enemy_train.enemyLook);
         window.draw(enemy_copter.enemyLook);
 
-       window.draw(.playerAnimation.rectangle);
+      // window.draw(player_bomber.playerAnimation.rectangle);
         player_firer.Draw(window);
         player_jumper.Draw(window);
         player_sniper.Draw(window);
@@ -376,6 +379,7 @@ hostage_pos_itr=hostage_pos.begin();
         window.draw(neem_tree_spr);
         window.draw(coconut_tree_spr);
         //player_enemy.playerAnimation.checkInsideLOC(rescue_team,window);
+        window.draw(speech);
         window.display();
         window.clear();
 

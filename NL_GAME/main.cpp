@@ -52,16 +52,16 @@ sf::Music train_sound;
 int main()
 {
     sf::VideoMode desktop = sf::VideoMode::getDesktopMode();
-    sf::RenderWindow window(sf::VideoMode(1024,768,desktop.bitsPerPixel),"Natural language based game");
+    sf::RenderWindow window(sf::VideoMode(1024,768,desktop.bitsPerPixel),"a Natural language based Computer game from SLEEPLESS WORKS");
     window.setFramerateLimit(15);
     Camera camera_view(0,0);
     float top=0.0,left=0.0,width=0.0,height=0.0,x=70.f,y=70.f;
     //train_sound.openFromFile("train.ogg");
 
 
-    train_sound.setVolume(40);
-    train_sound.setLoop(true);
-    train_sound.play();
+    //train_sound.setVolume(40);
+    //train_sound.setLoop(true);
+    //train_sound.play();
 
     sf::Sprite mango_tree_spr;
     sf::Texture mango_tree_tex;
@@ -268,7 +268,7 @@ hostage_pos_itr=hostage_pos.begin();
 
                 rec_y=0;
 
-           // std::cout<<"X"<<x<<"Y"<<y<<std::endl;
+             std::cout<<"X"<<x<<"Y"<<y<<std::endl;
             if( sf::Keyboard::isKeyPressed(sf::Keyboard:: M))
              {
                 rec_x_h=rec_x_h+5;
@@ -315,6 +315,7 @@ hostage_pos_itr=hostage_pos.begin();
 
         window.draw(map_sprite);
 
+
         if(player_bomber.IsFileContentsChanged())
             player_bomber.Update(window,enemy_team);
 
@@ -344,7 +345,6 @@ hostage_pos_itr=hostage_pos.begin();
 
         enemy_train.train_recursive();
         enemy_copter.copter_recursive();
-
         /*
         if(ck.getElapsedTime().asSeconds()>20)
         {
